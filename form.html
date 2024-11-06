@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Agencia de Viajes</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('paisaje.jpg') no-repeat center center fixed; /* Imagen de fondo */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            backdrop-filter: blur(8px); /* Efecto de desenfoque en el fondo */
+        }
+
+        /* Estilo para el formulario */
+        form {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+            border-radius: 15px; /* Bordes más redondeados */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            padding: 40px;
+            width: 100%;
+            max-width: 350px; /* Más angosto */
+            border: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden; /* Evita desbordamientos */
+        }
+
+        /* Líneas decorativas */
+        form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #007bff, #0056b3); /* Línea superior decorativa */
+        }
+
+        form::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #007bff, #0056b3); /* Línea inferior decorativa */
+        }
+
+        /* Título del formulario */
+        h2 {
+            text-align: center;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 24px;
+            position: relative;
+        }
+
+        /* Añadir un ícono al lado del título */
+        h2::before {
+            content: "\1F5FA"; /* Emoji de un globo terráqueo */
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Estilo para las etiquetas */
+        label {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+            display: block;
+            position: relative;
+        }
+
+        /* Estilo para los campos de texto */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+            background: #f7f7f7;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Estilo para los radio buttons */
+        input[type="radio"] {
+            margin: 0 10px 0 0;
+        }
+
+        /* Estilo para el select */
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: #f7f7f7;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Estilo para el botón */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #0056b3, #004494);
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
+        }
+
+        /* Estilo para los iconos decorativos dentro del formulario */
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            font-size: 18px;
+            color: #007bff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        /* Estilo para los radio buttons */
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="recoger2.php" method="post">
+        <h2>Agencia de Viajes</h2>
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required>
+            <span class="icon">👤</span>
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" name="Edad" required>
+            <span class="icon">🎂</span>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha del viaje:</label>
+            <input type="date" name="Fecha" required>
+            <span class="icon">📅</span>
+        </div>
+
+        <div class="form-group radio-group">
+            <label>¿Cliente VIP?</label>
+            <label for="vip_si"><input type="radio" name="VIP" value="si" required> Sí</label>
+            <label for="vip_no"><input type="radio" name="VIP" value="no" required> No</label>
+        </div>
+
+        <div class="form-group">
+            <label for="provincia">Provincia:</label>
+            <select name="Provincia">
+                <option value="Madrid">Madrid</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Bilbao">Bilbao</option>
+                <option value="Barcelona">Barcelona</option>
+            </select>
+            <span class="icon">📍</span>
+        </div>
+
+        <input type="submit" value="Guardar">
+    </form>
+
+</body>
+</html>
