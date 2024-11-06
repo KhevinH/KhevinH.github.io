@@ -14,11 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ejecutando la consulta SQL
     if ($stmt->execute(['username' => $username, 'password' => $password])) {
         // Si el registro fue exitoso, muestra el siguiente HTML con estilo
-        echo "<!DOCTYPE html>
-        <html lang='es'>
+        ?>
+        <!DOCTYPE html>
+        <html lang="es">
         <head>
-            <meta charset='UTF-8'>
-            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Registro Exitoso</title>
             <style>
                 body {
@@ -66,13 +67,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </style>
         </head>
         <body>
-            <div class='message-container'>
+            <div class="message-container">
                 <h2>Registro Exitoso</h2>
                 <p>Tu cuenta ha sido creada correctamente.</p>
-                <a href='login.php'>Iniciar sesión</a>
+                <a href="login.php">Iniciar sesión</a>
             </div>
         </body>
-        </html>";
+        </html>
+        <?php
     } else {
         // Si hay un error, muestra un mensaje sencillo
         echo "Error al registrar.";
