@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat Level 2 - English Comparatives & Superlatives Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="screen">
+        <h1>Combat - Level 2</h1>
+        <div class="enemy-container">
+            <img id="enemy-image" src="Img/img2.png" alt="Enemy">
+            <div id="health-bar">
+                <div id="health-bar-inner"></div>
+            </div>
+        </div>
+        <p id="question">Question will appear here</p>
+        <div id="choices"></div>
+        <p id="feedback"></p>
+
+        <button id="help-button" onclick="showHelp()">Help</button>
+        <div id="help-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Comparatives and Superlatives</h2>
+                <p>Comparatives are used to compare two things. For most adjectives, add "-er" to make the comparative (e.g., "smaller"). If the adjective ends in "y," replace it with "ier" (e.g., "happier").</p>
+                <p>Superlatives are used to show the extreme of a group. For most adjectives, add "-est" to make the superlative (e.g., "biggest"). For adjectives ending in "y," replace it with "iest" (e.g., "happiest").</p>
+                <button onclick="closeHelp()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="combat2.js"></script>
+</body>
+</html>

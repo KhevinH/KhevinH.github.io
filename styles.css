@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Img/background.jpeg);
+    color: white;
+}
+
+.screen {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    border: solid  white;
+    background-color: rgb(39, 39, 39);
+}
+
+/* Estilos para el título y subtítulo */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Barra de vida */
+.enemy-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#health-bar {
+    width: 100%;
+    background-color: #555;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#health-bar-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #ff3333;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Imagen del enemigo */
+#enemy-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para botones de opciones */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #333;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+/* Texto de retroalimentación */
+#feedback {
+    font-size: 1.2em;
+    color: #ffcc00;
+    margin-top: 15px;
+}
+img{
+    width: 700px;
+    height: 700px;
+}
